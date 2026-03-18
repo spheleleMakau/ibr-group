@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}IBR Group{% endblock %}</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+      html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="/" class="logo-container" style="background: none; box-shadow: none; padding: 0; display: flex; align-items: center;">
+                <img src="{% static 'img/logo.png' %}" alt="IBR Group Logo" class="logo" style="background: #fff; border-radius: 12px; height: 80px; width: auto; box-shadow: 0 2px 8px rgba(16,32,64,0.06); padding: 4px 12px;" />
+            </a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" aria-label="Toggle navigation" />
+            <label for="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/companies/">Companies</a></li>
+                <li><a href="/foundation/">Foundation</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; {{ year }} IBR Group. All rights reserved.</p>
+            <div class="footer-companies">
+                Ekhaya African Cuisine &bull; IBR Foundation &bull; IBR Agriculture &bull; IBR Mining & Engineering &bull; IBR Retail &bull; White Eagle Investments &bull; Crust Developments &bull; Tasty &bull; IBR Transport &bull; IBR Workshop
+            </div>
+        </div>
+    <!-- No JS needed for nav toggle -->
+    </footer>
+</body>
+</html>

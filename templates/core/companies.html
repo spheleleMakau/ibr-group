@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Companies - IBR Group{% endblock %}
+{% block content %}
+<section style="max-width: 1200px; margin: 2rem auto;">
+    <h1>Our Companies</h1>
+    <div class="companies-grid">
+        {% for company in companies %}
+        <div class="card">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">{{ company.icon }}</div>
+            <h3>{{ company.name }}</h3>
+            <p>{{ company.description }}</p>
+            <a href="{{ company.link }}" class="btn">Learn More</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

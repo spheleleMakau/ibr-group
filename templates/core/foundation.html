@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Foundation - IBR Group{% endblock %}
+{% block content %}
+<section class="card foundation-card" style="max-width: 900px; margin: 2rem auto; text-align: center;">
+    <img src="{% static 'img/logo2.png' %}" alt="IBR Foundation Logo" style="height: 100px; border-radius: 16px; margin-bottom: 1.5rem; box-shadow: 0 2px 12px rgba(29,161,210,0.10); background: #F5F7FA; padding: 8px;" />
+    <h1 style="color: #1DA1D2;">IBR Foundation & Social Impact</h1>
+    <p style="color: #0A3D62; font-size: 1.15rem;">We are committed to uplifting communities through impactful programs and partnerships.</p>
+    <ul style="color: #111111; text-align: left; max-width: 500px; margin: 1.5rem auto 0 auto;">
+        <li>Cleaning Rustenburg CBD</li>
+        <li>Life skills programs</li>
+        <li>Sponsorships</li>
+        <li>Community upliftment</li>
+    </ul>
+    <div style="margin-top:2rem;">
+        <h3 style="color: #1DA1D2;">Our Focus</h3>
+        <ul style="color: #0A3D62; text-align: left; max-width: 500px; margin: 0 auto;">
+            <li>Community programs</li>
+            <li>Job seekers support</li>
+            <li>School gardening</li>
+            <li>Youth development</li>
+        </ul>
+    </div>
+    <a href="#" class="btn" style="background: #1DA1D2; color: #fff; margin-top: 2rem; min-width: 200px;">Visit Foundation Website</a>
+</section>
+{% endblock %}
