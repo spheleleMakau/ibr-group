@@ -321,3 +321,29 @@ footer {
     margin: 0.5rem 0;
   }
 }
+
+.map-container {
+    margin-top: 2rem;
+    position: relative;
+}
+
+.map-frame {
+    border: 0;
+    border-radius: 1rem;
+    filter: grayscale(10%) contrast(1.05);
+}
+
+.map-button {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: #0A3D62;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 0.7rem;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
