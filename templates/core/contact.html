@@ -4,16 +4,20 @@
 <section class="card" style="max-width: 700px; margin: 2rem auto;">
     
     <h1>Contact Us</h1>
-    
+    <h2>Founder: Itumeleng Rapoo</h2>
     <p>Email: <a href="mailto:Karabo.rapoo@ibrholdings.co.za">Karabo.rapoo@ibrholdings.co.za</a></p>
-    <p>Phone: +27 11 123 4567</p>
+    <p>Phone: +27 235 5208</p>
+
     <p>Location: 8 Stoneridge Office Park, Modderfontein, Johannesburg , 1609</p>
-    <form method="post" style="margin-top:2rem;">
-        {% csrf_token %}
-        <input type="text" name="name" placeholder="Your Name" required style="width:100%;margin-bottom:1rem;">
-        <input type="email" name="email" placeholder="Your Email" required style="width:100%;margin-bottom:1rem;">
-        <textarea name="message" placeholder="Your Message" required style="width:100%;margin-bottom:1rem;"></textarea>
-        <button type="submit" class="btn">Send Message</button>
+    <h3>We'd love to hear from you! Please feel free to reach out to the admin with any questions or feedback.</h3>
+   
+   
+
+    <form id="whatsappForm" class="contact-form">
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send via WhatsApp</button>
     </form>
 <div class="map-container">
 
