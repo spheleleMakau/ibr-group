@@ -192,6 +192,7 @@ header {
   transform: translateY(-2px) scale(1.03);
 }
 
+
 .card {
   background: var(--white);
   border-radius: 1.25rem;
@@ -199,10 +200,98 @@ header {
   padding: 2rem;
   margin: 1rem 0;
   transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 420px;
 }
 .card:hover {
   box-shadow: 0 8px 32px rgba(29,161,210,0.12);
   transform: translateY(-4px) scale(1.02);
+}
+
+.card .btn {
+  margin-top: auto;
+  width: 100%;
+  max-width: 220px;
+}
+
+.card img {
+  display: block;
+  margin: 0 auto 1rem auto;
+  height: 65px;
+  width: auto;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(16,32,64,0.10);
+  padding: 0.5rem;
+}
+
+/* Map Pin Button Styling */
+.map-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--primary-blue);
+  color: var(--white) !important;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0 0;
+  box-shadow: 0 2px 8px rgba(16,32,64,0.08);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+.map-button:hover, .map-button:focus {
+  background: var(--secondary-blue);
+  color: var(--white) !important;
+  outline: none;
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Remove underline from all .btn and .map-button links */
+a.btn, a.map-button {
+  text-decoration: none !important;
+}
+
+/* About page grid refinement */
+.about-section {
+  background: var(--white);
+  border-radius: 1.25rem;
+  box-shadow: 0 2px 12px rgba(16,32,64,0.08);
+  padding: 2.5rem 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+}
+.about-section h1 {
+  color: var(--primary-blue);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.about-section p {
+  color: var(--secondary-blue);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.about-grid .card {
+  min-height: 160px;
+  background: var(--light-grey);
+  box-shadow: none;
+  border-radius: 1rem;
+  padding: 1.5rem 1rem;
+  color: var(--accent-black);
 }
 
 .companies-grid {
