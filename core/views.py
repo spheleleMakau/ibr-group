@@ -23,8 +23,34 @@ def about(request):
 def companies(request):
 	return render(request, "core/companies.html", {"companies": COMPANIES})
 
-def foundation(request):
-	return render(request, "core/foundation.html")
-
 def contact(request):
 	return render(request, "core/contact.html")
+
+def agriculture(request):
+	return render(request, "core/agriculture.html")
+
+def mining(request):
+	return render(request, "core/mining.html")
+
+def retail(request):
+	return render(request, "core/retail.html")
+
+def investments(request):
+	return render(request, "core/investments.html")
+
+def developments(request):
+	return render(request, "core/developments.html")
+
+def foundation(request):
+	return render(request, "core/foundation.html")
+def tasty(request):
+	return render(request, "core/tasty.html")
+
+def transport(request):
+	return render(request, "core/transport.html")
+
+def workshop(request):
+	return render(request, "core/workshop.html")
+
+def ekhaya(request):
+	return render(request, "core/ekhaya.html")

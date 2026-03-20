@@ -1,28 +1,54 @@
 {% extends 'base.html' %}
 {% block title %}Companies - IBR Group{% endblock %}
+
 {% block content %}
-<section style="max-width: 1200px; margin: 2rem auto; text-align:center;">
-    <h1 style="margin-bottom:2rem; color:var(--primary-blue); font-size:2.3rem; font-weight:700;">Our Companies</h1>
+<section style="max-width: 1200px; margin: 1rem auto; text-align:center;">
+    
+    <h1 style="margin-bottom:2rem; color:var(--primary-blue); font-size:2.3rem; font-weight:700;">
+        Our Companies
+    </h1>
+
     <div class="companies-grid">
         {% for company in companies %}
-        <div class="card" style="align-items:center; justify-content:flex-start; text-align:center; min-height:420px; display:flex; flex-direction:column;">
-            <div style="margin-bottom:1rem; min-height:48px; display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%;">
+        
+        <div class="card">
+            
+            <!-- TOP CONTENT -->
+
+            <!-- Logo/Icon -->
+            <div style="margin-bottom:1.2rem; min-height:48px; display:flex; align-items:center; justify-content:center; width:100%;">
                 {% if company.name == "IBR Foundation" %}
-                    <img src="/static/img/logo2.png" alt="IBR Foundation Logo" style="height:2.5rem; width:auto;" />
+                    <img src="/static/img/logo2.png" style="height:4rem;" />
                 {% elif company.name == "IBR Retail" %}
-                    <img src="/static/img/retail.jpeg" alt="IBR Retail Logo" style="height:2.5rem; width:auto;" />
+                    <img src="/static/img/retail.jpeg" style="height:4rem;" />
                 {% elif company.name == "Crust Developments" %}
-                    <img src="/static/img/rust.jpeg" alt="Crust Developments Logo" style="height:2.5rem; width:auto;" />
-                    <div style="font-size:0.9rem; color:#888; margin-top:0.2rem;">Designed by <b>Designedbylee007</b></div>
+                    <img src="/static/img/crust.png" style="height:4rem;" />
+                {% elif company.name == "IBR Mining & Engineering" %}
+                    <img src="/static/img/mining.png" style="height:4rem;" />
+                {% elif company.name == "Tasty" %}
+                    <img src="/static/img/Tasty.png" style="height:4rem;" />
+                {% elif company.name == "Ekhaya African Cuisine" %}
+                    <img src="/static/img/Ekhaya.png" style="height:4rem;" />
                 {% else %}
-                    <span style="font-size:2.5rem;">{{ company.icon }}</span>
+                    <span style="font-size:4rem;">{{ company.icon }}</span>
                 {% endif %}
             </div>
-            <h3 style="margin-bottom:0.7rem; color:var(--secondary-blue); font-size:1.25rem; font-weight:600;">{{ company.name }}</h3>
-            <p style="color:#444; font-size:1.05rem; margin-bottom:1.5rem; min-height:60px;">{{ company.description }}</p>
-            <div style="flex:1 1 auto;"></div>
-            <a href="{{ company.link }}" class="btn" style="width:100%; max-width:220px; margin-top:0.5rem;">Learn More</a>
+
+            <!-- Name -->
+            <h3 style="margin-bottom:0.6rem; color:var(--secondary-blue); font-size:1.25rem; font-weight:600; letter-spacing:0.01em;">
+                {{ company.name }}
+            </h3>
+
+            <!-- Description -->
+            <p style="color:#444; font-size:1.05rem; margin-bottom:0.7rem;">
+                {{ company.description }}
+            </p>
+            <a href="{{ company.link }}" class="btn card-btn">
+                Learn More
+            </a>
+
         </div>
+
         {% endfor %}
     </div>
 </section>
