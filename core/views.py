@@ -8,7 +8,7 @@ COMPANIES = [
 	{"name": "IBR Mining & Engineering", "icon": "⛏️", "description": "Drilling, construction, geology. 200+ jobs created.", "link": "/companies/mining/"},
 	{"name": "IBR Retail", "icon": "🛒", "description": "Retail operations across Africa.", "link": "/companies/retail/"},
 	{"name": "White Eagle Investments", "icon": "🦅", "description": "Strategic investments for growth.", "link": "/companies/investments/"},
-	{"name": "Crust Developments", "icon": "🏗️", "description": "Property and infrastructure development.", "link": "/companies/developments/"},
+	{"name": "Crust Developments", "icon": "🏗️", "description": "Creative publishing company empowering young entrepreneurs through books, quotes, and educational content.", "link": "/companies/developments/"},
 	{"name": "Tasty", "icon": "🍔", "description": "Quick service food brand.", "link": "/companies/tasty/"},
 	{"name": "IBR Transport", "icon": "🚚", "description": "Logistics and transport solutions.", "link": "/companies/transport/"},
 	{"name": "IBR Workshop", "icon": "🔧", "description": "Engineering and mechanical services.", "link": "/companies/workshop/"},
