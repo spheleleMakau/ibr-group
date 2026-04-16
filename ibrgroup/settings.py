@@ -32,6 +32,9 @@ ALLOWED_HOSTS = [
     "ibrhgroup.com",
     "www.ibrhgroup.com",
     ".onrender.com",
+    "localhost",
+    "127.0.0.1",
+    
 ]
 
 if render_hosts:
