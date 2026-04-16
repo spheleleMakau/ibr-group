@@ -26,7 +26,16 @@ import dj_database_url
 
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-__j!0nhmc2raz9ftv3j!7j+^hgfi%2bc1r!m75l_=73nroqhk+')
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
-ALLOWED_HOSTS = os.environ.get('RENDER_EXTERNAL_HOSTNAME', '').split(',') if os.environ.get('RENDER_EXTERNAL_HOSTNAME') else ['localhost', '127.0.0.1']
+render_hosts = os.environ.get('RENDER_EXTERNAL_HOSTNAME', '')
+
+ALLOWED_HOSTS = [
+    "ibrhgroup.com",
+    "www.ibrhgroup.com",
+    ".onrender.com",
+]
+
+if render_hosts:
+    ALLOWED_HOSTS += render_hosts.split(',')
 
 
 # Application definition
