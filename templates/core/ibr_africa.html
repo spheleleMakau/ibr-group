@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}IBR Africa - IBR Group{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>IBR Africa</h1>
+    <p>Explore the IBR Group Trust structure and the Africa-focused holdings, foundation, property and investment divisions.</p>
+</section>
+
+<section class="org-chart-section">
+    <div class="org-chart-top">
+        <div class="org-node org-node-trust">
+            <span>IBR H GROUP TRUST</span>
+        </div>
+    </div>
+
+    <div class="org-chart-grid">
+        <div class="org-column">
+            <div class="org-node org-node-main org-node-africa">
+                <h2>IBR Africa</h2>
+                <p>Regional business structure across Zimbabwe, Rwanda and Botswana.</p>
+            </div>
+            <div class="org-subgrid">
+                <div class="org-node org-node-secondary">
+                    <h3>IBR ZIM</h3>
+                    <div class="org-node-tag">IBR H Safety &amp; Sec</div>
+                    <ul class="org-node-list">
+                        <li>
+                            {% for c in companies %}
+                                {% if c.name == "White Eagle Investments" and c.logo %}
+                                    <img src="{% static c.logo %}" alt="{{ c.name }} logo" class="org-list-logo" />
+                                {% endif %}
+                            {% endfor %}
+                            White Eagle — 100%
+                        </li>
+                    </ul>
+                </div>
+                <div class="org-node org-node-secondary">
+                    <h3>IBR RWANDA</h3>
+                    <div class="org-node-tag">IBR H Mining &amp; Eng</div>
+                    <ul class="org-node-list">
+                        <li>Moreles — 55%</li>
+                        <li>Coal Mine</li>
+                        <li>Gold Mine</li>
+                        <li>Glass Mine</li>
+                    </ul>
+                </div>
+                <div class="org-node org-node-secondary">
+                    <h3>IBR BOTSWANA</h3>
+                    <div class="org-node-tag">IBR H Retail</div>
+                    <ul class="org-node-list">
+                        <li>IRASHU — 55%</li>
+                        <li>SDWALD — 55%</li>
+                        <li>Classic Elegance Furniture — 55%</li>
+                        <li>Sable Clothing — 100%</li>
+                        <li>PEP</li>
+                        <li>USAVE</li>
+                        <li>SPAR</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="org-column">
+            <div class="org-node org-node-main org-node-foundation">
+                <h2>IBR H Foundation</h2>
+                <p>Social impact, innovation, and culinary support businesses.</p>
+            </div>
+            <div class="org-subgrid">
+                <div class="org-node org-node-secondary">
+                    <h3>IBR H Innovation &amp; AI</h3>
+                    <ul class="org-node-list">
+                        <li>Research and future-facing technology initiatives.</li>
+                    </ul>
+                </div>
+                <div class="org-node org-node-secondary">
+                    <h3>IBR H Culinary</h3>
+                    <div class="org-node-tag">Culinary operations</div>
+                    <ul class="org-node-list">
+                        <li>
+                            {% for c in companies %}
+                                {% if c.name == "Ekhaya African Cuisine" and c.logo %}
+                                    <img src="{% static c.logo %}" alt="{{ c.name }} logo" class="org-list-logo" />
+                                {% endif %}
+                            {% endfor %}
+                            Ekhaya — 50%
+                        </li>
+                        <li>For Tasty A</li>
+                        <li>For Tasty J&amp;Y</li>
+                        <li>For Tasty Veg</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="org-column">
+            <div class="org-node org-node-main org-node-holdings">
+                <h2>IBR Holdings</h2>
+                <p>Property and long-term asset investments.</p>
+            </div>
+            <div class="org-subgrid">
+                <div class="org-node org-node-secondary">
+                    <h3>IBR H Property</h3>
+                    <ul class="org-node-list">
+                        <li>Thabo Mbeki 185</li>
+                        <li>Renoster Voei Plot</li>
+                        <li>SKR Luxury Lodge</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="org-column">
+            <div class="org-node org-node-main org-node-investment">
+                <h2>IBR H Investment</h2>
+                <p>Transport, agriculture, medical and environmental ventures.</p>
+            </div>
+            <div class="org-subgrid">
+                <div class="org-node org-node-secondary">
+                    <h3>IBR H Transport &amp; Agriculture</h3>
+                    <ul class="org-node-list">
+                        <li>Logistics and agricultural services.</li>
+                    </ul>
+                </div>
+                <div class="org-node org-node-secondary">
+                    <h3>IBR H Enviro &amp; Medical</h3>
+                    <ul class="org-node-list">
+                        <li>Environmental and medical investments.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

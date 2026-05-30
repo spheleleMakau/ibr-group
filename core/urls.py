@@ -11,9 +11,13 @@ urlpatterns = [
     path('companies/mining/', views.mining, name='mining'),
     path('companies/retail/', views.retail, name='retail'),
     path('companies/investments/', views.investments, name='investments'),
+    # compatibility route (older links)
+    path('investment/', views.investments, name='investment'),
     path('companies/developments/', views.developments, name='developments'),
     path('companies/tasty/', views.tasty, name='tasty'),
     path('companies/transport/', views.transport, name='transport'),
     path('companies/workshop/', views.workshop, name='workshop'),
     path('companies/ekhaya/', views.ekhaya, name='ekhaya'),
+    path('ibr_africa/', views.ibr_africa, name='ibr_africa'),
+
 ]

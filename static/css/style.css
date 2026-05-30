@@ -420,3 +420,117 @@ footer {
     margin: 0.5rem 0;
   }
 }
+
+/* Organization chart page */
+.org-chart-section {
+  max-width: 1240px;
+  margin: 2rem auto 4rem;
+  padding: 0 1rem;
+}
+.org-chart-top {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.org-chart-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+.org-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.org-subgrid {
+  display: grid;
+  gap: 1rem;
+}
+.org-node {
+  background: var(--white);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 18px rgba(16,32,64,0.08);
+  padding: 1.4rem;
+  text-align: center;
+  min-height: 120px;
+}
+.org-node h2,
+.org-node h3,
+.org-node h4 {
+  margin: 0 0 0.75rem;
+  color: var(--secondary-blue);
+}
+.org-node p {
+  margin: 0;
+  color: #475569;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+.org-node-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #344054;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.org-node-list li {
+  margin: 0.5rem 0 0;
+  padding-left: 0.75rem;
+  text-align: left;
+}
+.org-list-logo {
+  height: 26px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 0.6rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(16,32,64,0.08);
+}
+.org-node-tag {
+  display: inline-block;
+  margin: 0 auto 0.85rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: #f4f5f7;
+  color: #0f172a;
+  font-size: 0.88rem;
+}
+.org-node-trust {
+  background: #ffb36c;
+  color: #152841;
+  min-width: 280px;
+  border: none;
+}
+.org-node-trust span {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.org-node-main {
+  min-height: 150px;
+}
+.org-node-africa {
+  border: 1px solid rgba(45, 156, 219, 0.24);
+}
+.org-node-foundation {
+  border: 1px solid rgba(15, 96, 165, 0.18);
+}
+.org-node-holdings {
+  border: 1px solid rgba(56, 83, 246, 0.18);
+}
+.org-node-investment {
+  border: 1px solid rgba(16, 185, 129, 0.18);
+}
+@media (max-width: 1100px) {
+  .org-chart-grid {
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+  }
+}
+@media (max-width: 700px) {
+  .org-chart-grid {
+    grid-template-columns: 1fr;
+  }
+  .org-node {
+    min-height: unset;
+  }
+}
