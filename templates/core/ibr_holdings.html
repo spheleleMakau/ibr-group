@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}IBR Holdings - IBR Group{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>IBR Holdings</h1>
+    <p>Property and long-term asset investments.</p>
+</section>
+
+<section class="org-chart-section">
+    <div class="org-chart-container">
+        <div class="org-chart-grid">
+            <div class="org-region-card">
+                <div class="org-node org-node-secondary org-node-holdings">
+                    <div class="region-header">
+                        <h3>IBR H Property</h3>
+                    </div>
+                    <div class="org-node-tag specialty-tag">Property &amp; Asset Investments</div>
+                    <div class="holdings-section">
+                        <ul class="org-node-list">
+                            <li class="holding-item">Thabo Mbeki 185</li>
+                            <li class="holding-item">Renoster Voei Plot</li>
+                            <li class="holding-item">SKR Luxury Lodge</li>
+                        </ul>
+                        <div class="holding-meta">
+                            <span class="holding-name">Property Portfolio</span>
+                            <span class="holding-stake">Long-term</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

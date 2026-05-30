@@ -155,7 +155,9 @@ header {
 .hero {
   background: linear-gradient(120deg, var(--primary-blue) 60%, var(--secondary-blue) 100%);
   color: var(--white);
-  padding: 5rem 2rem 3rem 2rem;
+  padding: 4rem 2rem;
+  min-height: 340px;
+  box-sizing: border-box;
   text-align: center;
   border-radius: 0 0 2rem 2rem;
   box-shadow: 0 8px 32px rgba(29,161,210,0.08);
@@ -163,6 +165,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  will-change: transform, opacity;
 }
 .hero h1 {
   font-size: 2.5rem;
@@ -406,7 +409,8 @@ footer {
     border-bottom: none;
   }
   .hero {
-    padding: 2.5rem 0.5rem 1.5rem 0.5rem;
+    padding: 2.5rem 0.75rem;
+    min-height: 220px;
   }
   .btn {
     width: 100%;
@@ -533,4 +537,75 @@ footer {
   .org-node {
     min-height: unset;
   }
+}
+
+/* IBR Africa specific enhancements */
+.ibr-africa-intro {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem 2rem;
+}
+.intro-container {
+  background: linear-gradient(90deg, rgba(255,255,255,0.9), rgba(245,247,250,0.85));
+  border-radius: 1.25rem;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 30px rgba(16,32,64,0.06);
+  text-align: center;
+}
+.intro-container h2 {
+  color: var(--secondary-blue);
+  margin: 0 0 0.5rem 0;
+  font-size: 1.6rem;
+}
+.intro-container p { color: #334155; margin-bottom: 1rem; }
+.region-highlights { display: flex; gap: 1rem; justify-content: center; margin-top: 1rem; }
+.highlight-card { background: var(--white); border-radius: 12px; padding: 0.9rem 1rem; min-width: 160px; box-shadow: 0 4px 18px rgba(16,32,64,0.06); }
+.highlight-icon { font-size: 1.5rem; margin-bottom: 0.4rem; }
+.highlight-card h3 { margin: 0; color: var(--secondary-blue); font-size: 1.05rem; }
+.highlight-card p { margin: 0.3rem 0 0; color: #475569; font-size: 0.95rem; }
+
+.org-chart-container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
+.org-chart-title { text-align: center; color: var(--secondary-blue); font-size: 1.4rem; margin-bottom: 1rem; }
+.org-main-box { display: flex; justify-content: center; margin-bottom: 1.5rem; }
+.org-main-content { text-align: center; padding: 1.2rem 1.6rem; }
+.org-badge { display: inline-block; margin-top: 0.75rem; padding: 0.35rem 0.75rem; border-radius: 999px; background: rgba(29,161,210,0.12); color: var(--secondary-blue); font-weight: 600; }
+
+.org-chart-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; align-items: stretch; }
+.org-region-card { display: flex; }
+.org-node-secondary { padding: 1.25rem; text-align: left; display: flex; flex-direction: column; justify-content: flex-start; height: 100%; border-radius: 12px; }
+.org-region-card > .org-node { flex: 1 1 0%; display: flex; flex-direction: column; }
+.org-node .region-header { margin-bottom: 0.6rem; }
+.org-node .holdings-section { margin-top: 0.8rem; display: flex; flex-direction: column; gap: 0.6rem; flex: 1 1 auto; }
+.org-node .holdings-section .org-node-list { margin-top: 0; }
+.org-node .holding-logo-wrap { margin-bottom: 0.6rem; }
+.org-node .holding-name, .org-node .holding-stake { display: inline-block; }
+.org-node .holding-meta { margin-top: auto; display:flex; justify-content:space-between; align-items:center; gap:0.5rem; }
+.org-node .holding-meta .holding-name { font-weight:600; color: #0f172a; }
+.org-node .holding-meta .holding-stake { color: #64748b; font-weight:600; }
+.org-node { min-height: 260px; }
+.region-header { display: flex; align-items: center; justify-content: space-between; }
+.region-header h3 { margin: 0; color: var(--secondary-blue); }
+.org-node-zim .region-header h3,
+.org-node-rwanda .region-header h3,
+.org-node-botswana .region-header h3 { color: #1DA1D2; }
+.region-flag { font-size: 1.35rem; }
+.specialty-tag { margin-top: 0.65rem; }
+.holdings-section { margin-top: 0.9rem; }
+.holdings-title { font-weight: 700; color: #0f172a; margin-bottom: 0.5rem; }
+.holding-item { display: flex; gap: 0.5rem; align-items: center; justify-content: space-between; padding: 0.4rem 0; border-bottom: 1px dashed #eef2f6; }
+.holding-logo img { height: 28px; width: auto; display: inline-block; vertical-align: middle; }
+.org-list-logo.large-logo { height: 48px; width: auto; display: block; margin: 0 auto 0.6rem; }
+.holding-logo-wrap { display: flex; justify-content: center; align-items: center; margin-bottom: 0.6rem; }
+.org-node { box-shadow: 0 1px 10px rgba(16,32,64,0.06); }
+.org-node h3 { text-align: left; }
+.holding-item { display: flex; gap: 0.75rem; align-items: center; justify-content: space-between; padding: 0.45rem 0; border-bottom: 1px solid rgba(238,242,246,0.6); }
+.holding-item .holding-name { flex: 1; }
+.holding-item .holding-stake { margin-left: 0.5rem; color: #64748b; }
+.holding-name { color: #0f172a; font-weight: 600; }
+.holding-stake { color: #475569; font-weight: 600; }
+.resource-icon { margin-right: 0.6rem; }
+
+@media (max-width: 1000px) {
+  .org-chart-grid { grid-template-columns: 1fr; }
+  .region-highlights { flex-direction: column; gap: 0.6rem; }
 }

@@ -57,3 +57,9 @@ def ekhaya(request):
 
 def ibr_africa(request):
 	return render(request, "core/ibr_africa.html", {"companies": COMPANIES})
+
+def ibr_foundation(request):
+	return render(request, "core/ibr_foundation.html", {"companies": COMPANIES})
+
+def ibr_holdings(request):
+	return render(request, "core/ibr_holdings.html", {"companies": COMPANIES})
