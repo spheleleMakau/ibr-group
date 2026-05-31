@@ -1,9 +1,68 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}White Eagle Investments - IBR Group{% endblock %}
 {% block content %}
-<section style="max-width: 900px; margin: 2rem auto; background: var(--white); border-radius: 1.5rem; box-shadow: 0 2px 8px rgba(16,32,64,0.08); padding: 2rem; text-align:center;">
-    <span style="font-size:5rem; margin-bottom:1rem; display:inline-block;">🦅</span>
-    <h1 style="color: var(--primary-blue); font-size: 2rem; font-weight: 700;">White Eagle Investments</h1>
-    <p style="color: #444; font-size: 1.1rem; margin-top: 1.5rem;">White Eagle Investments is a security-focused business that forms part of the IBR Group’s investment portfolio. The company is involved in asset-based operations and security services, contributing to the group’s diversification strategy. While still developing, it represents a key opportunity for growth in the security and logistics space.</p>
+<section class="hero">
+    <h1>IBR H Investment</h1>
+    <p>Structured investment arms across transport &amp; agriculture, enviro &amp; medical, and financials &amp; insurance.</p>
+</section>
+
+<section class="org-chart-section">
+    <div class="org-chart-container">
+        <div class="org-chart-grid">
+            <div class="org-region-card">
+                <div class="org-node org-node-secondary org-node-zim">
+                    <div class="region-header zim-header">
+                        <h3>IBR H Transport &amp; Agriculture</h3>
+                    </div>
+                    <div class="org-node-tag specialty-tag">IBR H Transport</div>
+                    <div class="holdings-section">
+                        <div class="holding-logo-wrap" style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+                            <img src="{% static 'img/transport.jpeg' %}" alt="IBR Transport logo" class="org-list-logo large-logo" />
+                        </div>
+                        <p>Logistics and transport solutions.</p>
+                    <div class="org-node-tag specialty-tag">IBR H Agriculture</div>
+                         <div class="holding-logo-wrap" style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+                            <img src="{% static 'img/agriculture.jpeg' %}" alt="IBR Agriculture logo" class="org-list-logo large-logo" />
+                        </div>
+                        <p>South Africa & Botswana farms. Focus: vegetables + livestock.</p>
+                
+                    </div>
+                </div>
+            </div>
+
+            <div class="org-region-card">
+                <div class="org-node org-node-secondary org-node-rwanda">
+                    <div class="region-header rwanda-header">
+                        <h3>IBR H Enviro &amp; Medical</h3>
+                    </div>
+                    <!-- <div class="org-node-tag specialty-tag">Sustainability and healthcare solutions</div>
+                    <div class="holdings-section">
+                        <ul class="org-node-list">
+                            <li class="holding-item">Environmental services</li>
+                            <li class="holding-item">Medical supplies and support</li>
+                            <li class="holding-item">Green technology initiatives</li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="org-region-card">
+                <div class="org-node org-node-secondary org-node-botswana">
+                    <div class="region-header botswana-header">
+                        <h3>IBR H Financials &amp; Insurance</h3>
+                    </div>
+                    <!-- <div class="org-node-tag specialty-tag">Capital, risk and financial services</div>
+                    <div class="holdings-section">
+                        <ul class="org-node-list">
+                            <li class="holding-item">Insurance underwriting</li>
+                            <li class="holding-item">Investment financing</li>
+                            <li class="holding-item">Risk management solutions</li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 {% endblock %}

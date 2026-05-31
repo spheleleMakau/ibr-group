@@ -16,15 +16,12 @@
                     <div class="region-header">
                         <h3>IBR Foundation</h3>
                     </div>
-                    <div class="org-node-tag specialty-tag">Innovation &amp; AI</div>
+                    <div class="org-node-tag specialty-tag">IBR H Innovation &amp; AI</div>
                     <div class="holdings-section">
                         <ul class="org-node-list">
                             <li class="holding-item">Research and future-facing technology initiatives.</li>
                         </ul>
-                        <div class="holding-meta">
-                            <span class="holding-name">Innovation Lab</span>
-                            <span class="holding-stake">Strategic</span>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -35,23 +32,20 @@
                     </div>
                     <div class="org-node-tag specialty-tag">Culinary operations</div>
                     <div class="holdings-section">
-                        <div class="holding-logo-wrap">
-                            {% for c in companies %}
-                                {% if c.name == "Ekhaya African Cuisine" and c.logo %}
-                                    <img src="{% static c.logo %}" alt="{{ c.name }} logo" class="org-list-logo large-logo" />
-                                {% endif %}
-                            {% endfor %}
-                        </div>
                         <ul class="org-node-list">
-                            <li class="holding-item"><span class="holding-name">Ekhaya African Cuisine</span><span class="holding-stake">50%</span></li>
+                            <li class="holding-item">
+                                 <div class="holding-logo-wrap">
+                                {% for c in companies %}
+                                    {% if c.name == "Ekhaya African Cuisine" and c.logo %}
+                                        <img src="{% static c.logo %}" alt="{{ c.name }} logo" class="org-list-logo large-logo" />
+                                    {% endif %}
+                                {% endfor %}<span class="holding-name">Ekhaya African Cuisine</span><span class="holding-stake">50%</span></li>
+                               
+                        </div>
                             <li class="holding-item">For Tasty A</li>
                             <li class="holding-item">For Tasty J&amp;Y</li>
                             <li class="holding-item">For Tasty Veg</li>
                         </ul>
-                        <div class="holding-meta">
-                            <span class="holding-name">Culinary Portfolio</span>
-                            <span class="holding-stake">Impact</span>
-                        </div>
                     </div>
                 </div>
             </div>
