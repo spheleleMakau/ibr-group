@@ -2,16 +2,21 @@ from django.shortcuts import render
 
 # Data for companies
 COMPANIES = [
-    {"name": "Ekhaya African Cuisine", "icon": "🍽️", "description": "African food, spices, sauces, alcohol. Vision: Expand across Gauteng.", "link": "/companies/ekhaya/", "logo": "img/Ekhaya.png"},
-    {"name": "IBR Foundation", "icon": "💙", "description": "Community programs, job seekers support, school gardening, youth development.", "link": "/foundation", "logo": "img/logo2.png"},
-    {"name": "IBR Agriculture", "icon": "🌱", "description": "South Africa & Botswana farms. Focus: vegetables + livestock.", "link": "/companies/agriculture/", "logo": "img/agriculture.jpeg"},
-    {"name": "IBR Mining & Engineering", "icon": "⛏️", "description": "Drilling, construction, geology. 200+ jobs created.", "link": "/companies/mining/", "logo": "img/mining.png"},
-    {"name": "IBR Retail", "icon": "🛒", "description": "Retail operations across Africa.", "link": "/companies/retail/", "logo": "img/retail.jpeg"},
-    {"name": "White Eagle Investments", "icon": "🦅", "description": "Strategic investments for growth.", "link": "/companies/investments/", "logo": "img/whiteeagle.jpeg"},
-    {"name": "Crust Developments", "icon": "🏗️", "description": "Creative publishing company empowering young entrepreneurs through books, quotes, and educational content.", "link": "/companies/developments/", "logo": "img/crust.png"},
-    {"name": "Tasty", "icon": "🍔", "description": "Quick service food brand.", "link": "/companies/tasty/", "logo": "img/Tasty.png"},
-    {"name": "IBR Transport", "icon": "🚚", "description": "Logistics and transport solutions.", "link": "/companies/transport/", "logo": "img/transport.jpeg"},
-	{"name": "IBR Workshop", "icon": "🔧", "description": "Engineering and mechanical services.", "link": "/companies/workshop/", "logo": "img/ibr_holdings.jpeg"},
+
+    {"name": "Ekhaya African Cuisine", "description": "African food, spices, sauces, alcohol. Vision: Expand across Gauteng.", "link": "/companies/ekhaya/", "logo": "img/Ekhaya.png"},
+    {"name": "IBR Foundation", "description": "Community programs, job seekers support, school gardening, youth development.", "link": "/foundation", "logo": "img/logo2.png"},
+    {"name": "IBR Agriculture", "description": "South Africa & Botswana farms. Focus: vegetables + livestock.", "link": "/companies/agriculture/", "logo": "img/agriculture.jpeg"},
+    {"name": "IBR Mining & Engineering", "description": "Drilling, construction, geology. 200+ jobs created.", "link": "/companies/mining/", "logo": "img/mining.png"},
+    {"name": "IBR Retail", "description": "Retail operations across Africa.", "link": "/companies/retail/", "logo": "img/retail.jpeg"},
+    {"name": "White Eagle Investments", "description": "Strategic investments for growth.", "link": "/companies/investments/", "logo": "img/whiteeagle.jpeg"},
+    {"name": "Crust Developments", "description": "Creative publishing company empowering young entrepreneurs through books, quotes, and educational content.", "link": "/companies/developments/", "logo": "img/crust.png"},
+    {"name": "Tasty", "description": "Quick service food brand.", "link": "/companies/tasty/", "logo": "img/Tasty.png"},
+    {"name": "IBR Transport", "description": "Logistics and transport solutions.", "link": "/companies/transport/", "logo": "img/transport.jpeg"},
+	{"name": "IBR Workshop", "description": "Engineering and mechanical services.", "link": "/companies/workshop/", "logo": "img/ibr_holdings.jpeg"},
+	{"name": "IBR H Financials Insurance", "description": "", "link": "/companies/investments/", "logo": "img/.jpeg"},
+	{"name": "IBR H Innovation & AI", "description": "", "link": "/companies/investments/", "logo": "img/innov&ai.jpeg"},
+
+
 ]
 
 def home(request):
@@ -36,16 +41,7 @@ def retail(request):
 	return render(request, "core/retail.html")
 
 def investments(request):
-	excluded = {"IBR Foundation", "Ekhaya African Cuisine", "IBR Transport", "IBR Agriculture"}
-	companies = [c for c in COMPANIES if c["name"] not in excluded]
-	companies.append({
-		"name": "IBR H Property",
-		"icon": "🏢",
-		"description": "Real estate and asset holdings.",
-		"link": "/companies/investments/",
-		"logo": "img/property.jpeg"
-	})
-	return render(request, "core/investments.html", {"companies": companies})
+	return render(request, "core/investments.html", {"companies": COMPANIES})
 
 def developments(request):
 	return render(request, "core/developments.html")
