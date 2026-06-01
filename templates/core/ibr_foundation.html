@@ -17,39 +17,22 @@
                         <h3>IBR Foundation</h3>
                     </div>
                     <div class="org-node-tag specialty-tag">IBR H Innovation &amp; AI</div>
-                    <div class="holdings-section">
-                        <ul class="org-node-list">
-                            <li class="holding-item">Research and future-facing technology initiatives.</li>
-                        </ul>
-
-                    </div>
-                </div>
-            </div>
-            <div class="org-region-card">
-                <div class="org-node org-node-secondary org-node-foundation">
-                    <div class="region-header">
-                        <h3>IBR H Culinary</h3>
-                    </div>
-                    <div class="org-node-tag specialty-tag">Culinary operations</div>
-                    <div class="holdings-section">
-                        <ul class="org-node-list">
-                            <li class="holding-item">
-                                 <div class="holding-logo-wrap">
-                                {% for c in companies %}
-                                    {% if c.name == "Ekhaya African Cuisine" and c.logo %}
-                                        <img src="{% static c.logo %}" alt="{{ c.name }} logo" class="org-list-logo large-logo" />
-                                    {% endif %}
-                                {% endfor %}<span class="holding-name">Ekhaya African Cuisine</span><span class="holding-stake">50%</span></li>
-                               
+                    <div class="holdings-section" style="text-align:center;">
+                        <div style="margin: 1.5rem auto 0 auto; max-width: 220px;">
+                            <img src="{% static 'img/logo2.png' %}" alt="IBR Foundation Logo" style="height: 100px; width: auto; border-radius: 16px; box-shadow: 0 2px 12px rgba(29,161,210,0.12); background: #fff; padding: 8px;" />
                         </div>
-                            <li class="holding-item">For Tasty A</li>
-                            <li class="holding-item">For Tasty J&amp;Y</li>
-                            <li class="holding-item">For Tasty Veg</li>
+                        <ul class="org-node-list" style="margin-top: 1.5rem;">
                         </ul>
+                        <div style="text-align:center; margin: 2rem 0;">
+                            <a href="https://ibrfoundation.co.za/" class="btn" style="background: #1DA1D2; color: #fff; min-width: 200px;">Visit Foundation Website</a>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
 {% endblock %}

@@ -4,7 +4,6 @@
 {% block content %}
 <section class="hero">
     <h1>IBR H Investment</h1>
-    <p>Structured investment arms across transport &amp; agriculture, enviro &amp; medical, and financials &amp; insurance.</p>
 </section>
 
 <section class="org-chart-section">
@@ -21,12 +20,11 @@
                             <img src="{% static 'img/transport.jpeg' %}" alt="IBR Transport logo" class="org-list-logo large-logo" />
                         </div>
                         <p>Logistics and transport solutions.</p>
-                    <div class="org-node-tag specialty-tag">IBR H Agriculture</div>
-                         <div class="holding-logo-wrap" style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+                        <div class="org-node-tag specialty-tag">IBR H Agriculture</div>
+                        <div class="holding-logo-wrap" style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
                             <img src="{% static 'img/agriculture.jpeg' %}" alt="IBR Agriculture logo" class="org-list-logo large-logo" />
                         </div>
                         <p>South Africa & Botswana farms. Focus: vegetables + livestock.</p>
-                
                     </div>
                 </div>
             </div>
@@ -36,14 +34,7 @@
                     <div class="region-header rwanda-header">
                         <h3>IBR H Enviro &amp; Medical</h3>
                     </div>
-                    <!-- <div class="org-node-tag specialty-tag">Sustainability and healthcare solutions</div>
-                    <div class="holdings-section">
-                        <ul class="org-node-list">
-                            <li class="holding-item">Environmental services</li>
-                            <li class="holding-item">Medical supplies and support</li>
-                            <li class="holding-item">Green technology initiatives</li>
-                        </ul>
-                    </div> -->
+                    
                 </div>
             </div>
 
@@ -52,17 +43,66 @@
                     <div class="region-header botswana-header">
                         <h3>IBR H Financials &amp; Insurance</h3>
                     </div>
-                    <!-- <div class="org-node-tag specialty-tag">Capital, risk and financial services</div>
-                    <div class="holdings-section">
-                        <ul class="org-node-list">
-                            <li class="holding-item">Insurance underwriting</li>
-                            <li class="holding-item">Investment financing</li>
-                            <li class="holding-item">Risk management solutions</li>
-                        </ul>
-                    </div> -->
                 </div>
             </div>
+
+            <div class="org-region-card">
+                <div class="org-node org-node-secondary org-node-foundation">
+                    <div class="region-header">
+                        <h3>IBR H Culinary</h3>
+                    </div>
+                    <div class="holdings-section">
+                        <ul class="org-node-list">
+                            <li class="holding-item">
+                                <div class="holding-logo-wrap" style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; margin-bottom:0.75rem;">
+                                    <img src="{% static 'img/Ekhaya.png' %}" alt="Ekhaya African Cuisine Logo" class="org-list-logo large-logo" style="height:5rem; width:auto; margin-bottom:1rem;" />
+                                </div>
+                                <span class="holding-name">Ekhaya African Cuisine</span><span class="holding-stake">50%</span>
+                            </li>
+                            <li class="holding-item">For Tasty A</li>
+                            <li class="holding-item">For Tasty J&amp;Y</li>
+                            <li class="holding-item">For Tasty Veg</li>
+                        </ul>
+                        <div style="text-align:center; margin-top:1rem;">
+                            <a href="https://ekhaya-africancuisine.co.za" class="btn" style="background: #1DA1D2; color: #fff; min-width: 200px;">Visit Ekhaya Website</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        
+            </div>
         </div>
+    </div>
+</section>
+
+<section class="companies-section" style="max-width: 1200px; margin: 2rem auto; text-align:center;">
+    <div class="companies-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:1.5rem;">
+        {% for company in companies %}
+        <div class="card" style="padding:1.5rem; text-align:left;">
+            {% if company.name != "IBR H Property" %}
+            <div style="margin-bottom:1.2rem; min-height:48px; display:flex; align-items:center; justify-content:center; width:100%;">
+                {% if company.logo %}
+                    <img src="{% static company.logo %}" style="height:4rem; width:auto;" alt="{{ company.name }} logo" />
+                {% else %}
+                    <span style="font-size:4rem;">{{ company.icon }}</span>
+                {% endif %}
+            </div>
+            {% endif %}
+            <h3 style="margin-bottom:0.6rem; color:var(--secondary-blue); font-size:1.25rem; font-weight:600; letter-spacing:0.01em;">{{ company.name }}</h3>
+            <p style="color:#444; font-size:1.05rem; margin-bottom:0.7rem;">{{ company.description }}</p>
+            {% if company.name == "IBR H Property" %}
+            <ul style="color:#444; text-align:left; margin:0.5rem 0 1rem 0;">
+                <li>THABO MBEKI 185</li>
+                <li>RENOSTERVOEL Plot</li>
+                <li>SKR LUXURY LODGE</li>
+            </ul>
+            {% endif %}
+            <a href="{{ company.link }}" class="btn card-btn">Learn More</a>
+        </div>
+        {% endfor %}
     </div>
 </section>
 {% endblock %}

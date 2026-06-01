@@ -11,7 +11,7 @@ COMPANIES = [
     {"name": "Crust Developments", "icon": "🏗️", "description": "Creative publishing company empowering young entrepreneurs through books, quotes, and educational content.", "link": "/companies/developments/", "logo": "img/crust.png"},
     {"name": "Tasty", "icon": "🍔", "description": "Quick service food brand.", "link": "/companies/tasty/", "logo": "img/Tasty.png"},
     {"name": "IBR Transport", "icon": "🚚", "description": "Logistics and transport solutions.", "link": "/companies/transport/", "logo": "img/transport.jpeg"},
-    {"name": "IBR Workshop", "icon": "🔧", "description": "Engineering and mechanical services.", "link": "/companies/workshop/"},
+	{"name": "IBR Workshop", "icon": "🔧", "description": "Engineering and mechanical services.", "link": "/companies/workshop/", "logo": "img/ibr_holdings.jpeg"},
 ]
 
 def home(request):
@@ -36,7 +36,14 @@ def retail(request):
 	return render(request, "core/retail.html")
 
 def investments(request):
-	return render(request, "core/investments.html")
+	excluded = {"IBR Foundation", "Ekhaya African Cuisine", "IBR Transport", "IBR Agriculture"}
+	companies = [c for c in COMPANIES if c["name"] not in excluded]
+	companies.append({
+		"name": "IBR H Property",
+		"description": "Real estate and asset holdings.",
+		"link": "/companies/investments/",
+	})
+	return render(request, "core/investments.html", {"companies": companies})
 
 def developments(request):
 	return render(request, "core/developments.html")
