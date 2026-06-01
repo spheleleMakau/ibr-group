@@ -34,7 +34,9 @@
                     <div class="region-header rwanda-header">
                         <h3>IBR H Enviro &amp; Medical</h3>
                     </div>
-                    
+                    <div class="holding-logo-wrap" style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; margin:1rem 0;">
+                        <img src="{% static 'img/innov&ai.jpeg' %}" alt="IBR H Enviro & Medical logo" class="org-list-logo large-logo" style="height:5rem; width:auto;" />
+                    </div>
                 </div>
             </div>
 
@@ -51,11 +53,14 @@
                     <div class="region-header">
                         <h3>IBR H Culinary</h3>
                     </div>
+                    <div class="holding-logo-wrap" style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; margin:1rem 0;">
+                        <img src="{% static 'img/culinary.jpeg' %}" alt="IBR H Culinary logo" class="org-list-logo large-logo" style="height:5rem; width:auto;" />
+                    </div>
                     <div class="holdings-section">
                         <ul class="org-node-list">
                             <li class="holding-item">
                                 <div class="holding-logo-wrap" style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; margin-bottom:0.75rem;">
-                                    <img src="{% static 'img/Ekhaya.png' %}" alt="Ekhaya African Cuisine Logo" class="org-list-logo large-logo" style="height:5rem; width:auto; margin-bottom:1rem;" />
+                                    <img src="{% static 'img/Ekhaya.png' %}" alt="Ekhaya African Cuisine Logo" class="org-list-logo large-logo" style="height:4cap; width:auto; margin-bottom:1rem;" />
                                 </div>
                                 <span class="holding-name">Ekhaya African Cuisine</span><span class="holding-stake">50%</span>
                             </li>
@@ -82,7 +87,6 @@
     <div class="companies-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:1.5rem;">
         {% for company in companies %}
         <div class="card" style="padding:1.5rem; text-align:left;">
-            {% if company.name != "IBR H Property" %}
             <div style="margin-bottom:1.2rem; min-height:48px; display:flex; align-items:center; justify-content:center; width:100%;">
                 {% if company.logo %}
                     <img src="{% static company.logo %}" style="height:4rem; width:auto;" alt="{{ company.name }} logo" />
@@ -90,7 +94,6 @@
                     <span style="font-size:4rem;">{{ company.icon }}</span>
                 {% endif %}
             </div>
-            {% endif %}
             <h3 style="margin-bottom:0.6rem; color:var(--secondary-blue); font-size:1.25rem; font-weight:600; letter-spacing:0.01em;">{{ company.name }}</h3>
             <p style="color:#444; font-size:1.05rem; margin-bottom:0.7rem;">{{ company.description }}</p>
             {% if company.name == "IBR H Property" %}

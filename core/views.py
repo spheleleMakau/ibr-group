@@ -40,8 +40,10 @@ def investments(request):
 	companies = [c for c in COMPANIES if c["name"] not in excluded]
 	companies.append({
 		"name": "IBR H Property",
+		"icon": "🏢",
 		"description": "Real estate and asset holdings.",
 		"link": "/companies/investments/",
+		"logo": "img/property.jpeg"
 	})
 	return render(request, "core/investments.html", {"companies": companies})
 
