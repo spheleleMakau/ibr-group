@@ -13,8 +13,10 @@ COMPANIES = [
     {"name": "Tasty", "description": "Quick service food brand.", "link": "/companies/tasty/", "logo": "img/Tasty.png"},
     {"name": "IBR Transport", "description": "Logistics and transport solutions.", "link": "/companies/transport/", "logo": "img/transport.jpeg"},
 	{"name": "IBR Workshop", "description": "Engineering and mechanical services.", "link": "/companies/workshop/", "logo": "img/ibr_holdings.jpeg"},
-	{"name": "IBR H Financials Insurance", "description": "", "link": "/companies/investments/", "logo": "img/.jpeg"},
+	{"name": "SKR Group", "description": "", "link": "/companies/investments/", "logo": "img/skr.jpeg"},
 	{"name": "IBR H Innovation & AI", "description": "", "link": "/companies/investments/", "logo": "img/innov&ai.jpeg"},
+	{"name": "Nitro Group", "description": "", "link": "/companies/investments/", "logo": "img/nitro group.jpeg"},
+
 
 
 ]
