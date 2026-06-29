@@ -34,11 +34,11 @@ ALLOWED_HOSTS = [
     ".onrender.com",
     "localhost",
     "127.0.0.1",
-    
 ]
 
-if render_hosts:
-    ALLOWED_HOSTS += render_hosts.split(',')
+render_host = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
+if render_host:
+    ALLOWED_HOSTS.append(render_host)
 
 
 # Application definition
