@@ -15,7 +15,7 @@ COMPANIES = [
 	{"name": "IBR Workshop", "description": "Engineering and mechanical services.", "link": "/companies/workshop/", "logo": "img/ibr_holdings.jpeg"},
 	{"name": "SKR Group", "description": "", "link": "/companies/investments/", "logo": "img/skr.jpeg"},
 	{"name": "IBR H Innovation & AI", "description": "", "link": "/companies/investments/", "logo": "img/innov&ai.jpeg"},
-	{"name": "Nitro Group", "description": "", "link": "/companies/investments/", "logo": "img/nitro group.jpeg"},
+	{"name": "Nitro Group", "description": "Multidisciplinary engineering, consulting and transformation solutions for mining, renewable energy, infrastructure and enterprise growth.", "link": "/companies/nitro/", "logo": "img/nitro group.jpeg"},
 
 
 
@@ -67,6 +67,9 @@ def ibr_africa(request):
 
 def ibr_foundation(request):
 	return render(request, "core/ibr_foundation.html", {"companies": COMPANIES})
+
+def nitro_group(request):
+	return render(request, "core/nitro_group.html")
 
 def ibr_holdings(request):
 	return render(request, "core/ibr_holdings.html", {"companies": COMPANIES})

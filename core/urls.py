@@ -18,6 +18,7 @@ urlpatterns = [
     path('companies/transport/', views.transport, name='transport'),
     path('companies/workshop/', views.workshop, name='workshop'),
     path('companies/ekhaya/', views.ekhaya, name='ekhaya'),
+    path('companies/nitro/', views.nitro_group, name='nitro_group'),
     path('ibr_africa/', views.ibr_africa, name='ibr_africa'),
     path('ibr_foundation/', views.ibr_foundation, name='ibr_foundation'),
     path('ibr_holdings/', views.ibr_holdings, name='ibr_holdings'),
